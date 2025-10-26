@@ -1,0 +1,14 @@
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+  test-node-18:
+    uses: ./.github/workflows/reusable-test.yaml
+    with:
+      node-version: "18"
+
+  test-node-20:
+    uses: ./.github/workflows/reusable-test.yaml
+    with:
+      node-version: "20"
